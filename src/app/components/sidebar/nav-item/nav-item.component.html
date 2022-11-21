@@ -1,0 +1,23 @@
+<ng-container *ngIf="!item.hidden">
+  <!-- //NOSONAR -->
+  <li *ngIf="item.url"
+      [routerLinkActive]="['nav-active']">
+    <a [routerLink]="[item.url]">
+      <ng-container *ngTemplateOutlet="itemIcon"></ng-container>
+      <span class="text nav-text" >
+        {{ item.title }}
+      </span>
+    </a>
+  </li>
+  <ng-template #itemIcon>
+    <pichincha-icon *ngIf="item.icon"
+                    class="icon"
+                    size="25px"
+                    color="error"
+                    weight_color="900"
+                    type="--round">
+      {{item.icon}}
+    </pichincha-icon>
+  </ng-template>
+
+</ng-container>

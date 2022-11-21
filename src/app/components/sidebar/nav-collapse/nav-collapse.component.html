@@ -1,0 +1,44 @@
+<ng-container *ngIf="!item.hidden">
+  <!-- //NOSONAR -->
+  <li style="flex-direction: column"
+      [routerLinkActive]="['active']">
+    <a [routerLinkActive]="['active']"
+       href="javascript:"
+       (click)="navCollapse($event)">
+      <ng-container *ngTemplateOutlet="itemContent"></ng-container>
+    </a>
+    <ng-container *ngTemplateOutlet="subMenuContent"></ng-container>
+  </li>
+  <ng-template #itemContent>
+    <pichincha-icon *ngIf="item.icon"
+                    class="icon"
+                    size="25px"
+                    color="error"
+                    weight_color="900"
+                    type="--round">
+      {{item.icon}}
+    </pichincha-icon>
+    <span class="text nav-text">{{item.title}}</span>
+
+    <div class="w-100 d-flex justify-content-end">
+      <pichincha-icon class="icon"
+                      size="25px"
+                      color="error"
+                      weight_color="900"
+                      type="--round">
+        {{ visible ? 'expand_less' : 'expand_more'}}
+      </pichincha-icon>
+    </div>
+  </ng-template>
+  <ng-template #subMenuContent>
+    <ul class="sub-menu"
+        [ngClass]="{'sub-menu-open':visible}"
+        [routerLinkActive]="['active']">
+      <ng-container *ngFor="let navChildren of item.children">
+        <app-nav-item *ngIf="navChildren.type === 'item'"
+                      [item]="navChildren"
+        ></app-nav-item>
+      </ng-container>
+    </ul>
+  </ng-template>
+</ng-container>

@@ -1,0 +1,21 @@
+<app-top-header [user]="fullName"
+                (logout)="logout()"
+></app-top-header>
+<app-sidebar [closeSidebar]="isClosed"
+             (toggleEventEmitter)="onClickToggle($event)">
+</app-sidebar>
+
+<section class="home"
+         [ngClass]="{'nav-close': closeSidebar}">
+
+  <div class="allButFooter">
+
+    <app-breadcrumb></app-breadcrumb>
+
+    <!-- Your page's content goes here, including header, nav, aside, everything -->
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer></app-footer>
+
+</section>

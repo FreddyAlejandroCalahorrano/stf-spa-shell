@@ -1,0 +1,30 @@
+[
+  {
+    "scope": "solicitud-recursos",
+    "name": "mfapp",
+    "urlResource": "http://localhost:4201/remoteEntry.js",
+    "layout": "dashboard",
+    "moduleName": "MFModule"
+  },
+  {
+    "scope": "admin",
+    "name": "mf_staffing_app",
+    "urlResource": "http://localhost:4202/remoteEntry.js",
+    "layout": "dashboard",
+    "moduleName": "MFModule"
+  },
+  {
+    "scope": "reporting",
+    "name": "mf_reporting_app",
+    "urlResource": "http://localhost:4203/remoteEntry.js",
+    "layout": "dashboard",
+    "moduleName": "MFModule"
+  },
+  {
+    "scope": "user",
+    "name": "user",
+    "urlResource": "http://localhost:4203/remoteEntry.js",
+    "layout": "dashboard",
+    "moduleName": "UserModule"
+  }
+]

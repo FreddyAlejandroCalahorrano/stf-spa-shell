@@ -1,0 +1,45 @@
+<ng-container *ngIf="this.navigationList">
+  <ng-container *ngFor="let breadcrumb of navigationList; let last = last">
+    <div class="page-header" *ngIf="last && breadcrumb.breadcrumbs !== false">
+      <div class="page-block">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <!--<div class="page-header-title">
+              <ng-container *ngFor="let breadcrumb of navigationList; let last = last">
+                <h5 class="m-b-10" *ngIf="last">
+                  {{breadcrumb.title}}
+                </h5>
+              </ng-container>
+            </div>-->
+            <ul class="breadcrumb">
+              <!--<li class="breadcrumb-item">
+                <a [routerLink]="['/dashboard/analytics/']">
+                  Home
+                </a>
+              </li>-->
+              <ng-container *ngFor="let breadcrumb of navigationList; let ultimo = last">
+
+                <li class="breadcrumb-item" [ngClass]="{'active': ultimo}">
+
+                  <ng-container *ngIf="ultimo; else items">
+                    <a href="javascript:">
+                      {{breadcrumb.title}}
+                    </a>
+                  </ng-container>
+                  <ng-template #items>
+                    <a [routerLink]="breadcrumb.url">
+                      {{breadcrumb.title}}
+                    </a>
+                  </ng-template>
+
+
+                </li>
+
+              </ng-container>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

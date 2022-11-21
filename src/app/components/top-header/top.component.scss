@@ -1,0 +1,150 @@
+$wrap: "top-header";
+
+.#{$wrap} {
+  position: fixed;
+  z-index: 100;
+
+  &__business-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    display: block;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background: var(--blue500);
+  max-width: auto;
+  margin: 0 auto;
+  height: 64px;
+}
+
+.nav-link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.logo {
+  padding: 18px 0 18px 24px;
+  line-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  all: unset;
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  margin: 0 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  position: static;
+}
+
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-item__logout {
+  cursor: pointer;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: var(--blue200);
+  transition: 0.5s;
+}
+
+.text_color {
+  color: var(--white);
+}
+
+.btn-initials {
+  //width: 32px !important;
+  height: 32px !important;
+  margin: 0;
+  border-radius: 30px;
+  color: var(--white);
+  //background: #bec7db;
+  display: flex;
+  align-items: center;
+}
+
+.margin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1245px) {
+  .hidden-md {
+    display: none !important;
+  }
+  .padding-icon {
+    padding-right: 0px !important;
+  }
+  .#{$wrap} {
+    &__business-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100px;
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 710px) and (max-width: 768px) {
+  .hidden-ms {
+    display: none !important;
+  }
+  .hidden-md {
+    display: none !important;
+  }
+  .padding-icon {
+    padding-right: 0px !important;
+  }
+  .nav-menu {
+    margin-right: 0px;
+  }
+  .#{$wrap} {
+    &__business-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 80px;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .hidden-ms {
+    display: none !important;
+  }
+  .hidden-md {
+    display: none !important;
+  }
+  .hidden-logout {
+    display: none !important;
+  }
+  .nav-menu {
+    margin-right: 8px;
+  }
+}
+
+.padding-icon {
+  padding-right: 8px;
+}

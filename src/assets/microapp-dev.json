@@ -1,0 +1,30 @@
+[
+  {
+    "scope": "solicitud-recursos",
+    "name": "mfapp",
+    "urlResource": "https://tribu-ti-staffing-desarrollo-afangwbmcrhucqfh.z01.azurefd.net/resource-request/remoteEntry.js",
+    "layout": "dashboard",
+    "moduleName": "MFModule"
+  },
+  {
+    "scope": "admin",
+    "name": "mf_staffing_app",
+    "urlResource": "https://tribu-ti-staffing-desarrollo-afangwbmcrhucqfh.z01.azurefd.net/admin/remoteEntry.js",
+    "layout": "dashboard",
+    "moduleName": "MFModule"
+  },
+  {
+    "scope": "reporting",
+    "name": "mf_reporting_app",
+    "urlResource": "https://tribu-ti-staffing-desarrollo-afangwbmcrhucqfh.z01.azurefd.net/reporting/remoteEntry.js",
+    "layout": "dashboard",
+    "moduleName": "MFModule"
+  },
+  {
+    "scope": "user",
+    "name": "user",
+    "urlResource": "http://localhost:4202/remoteEntry.js",
+    "layout": "dashboard",
+    "moduleName": "UserModule"
+  }
+]
